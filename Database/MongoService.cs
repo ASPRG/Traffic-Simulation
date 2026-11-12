@@ -15,7 +15,8 @@ namespace SimTMDG.Database
 
         static MongoService()
         {
-            string connectionString = "mongodb://atcs:HgsVxomvAXvUW3z0@nosql.smartsystem.id:27017/atcs";
+            string connectionString = System.Configuration.ConfigurationManager.AppSettings["MongoConnectionString"]
+                ?? throw new InvalidOperationException("MongoConnectionString not set in App.config appSettings");
             MongoUrl mongoUrl = MongoUrl.Create(connectionString);
             _client = new MongoClient(mongoUrl);
         }

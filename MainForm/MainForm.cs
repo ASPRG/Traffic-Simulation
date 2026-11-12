@@ -179,7 +179,7 @@ namespace SimTMDG
             _trafficLight3 = new TrafficLight();
             _trafficLight4 = new TrafficLight();
 
-            string osmPath = @"C:\Users\ajico\Documents\Coding\Backend\c#_digtwin\SimTMDG-master\osm-map\bandung-city-wide.osm";
+            string osmPath = Path.Combine(Application.StartupPath, @"..\..\model\bandung-city-wide.osm");
             LoadOsmMap(osmPath);
 
             this.Load += Main_Load;
