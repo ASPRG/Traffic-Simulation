@@ -179,6 +179,7 @@ namespace SimTMDG
             _trafficLight3 = new TrafficLight();
             _trafficLight4 = new TrafficLight();
 
+            // StartupPath = bin\Debug\ ; OSM file expected at <project_root>\model\bandung-city-wide.osm
             string osmPath = Path.Combine(Application.StartupPath, @"..\..\model\bandung-city-wide.osm");
             LoadOsmMap(osmPath);
 
